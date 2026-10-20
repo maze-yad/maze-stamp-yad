@@ -145,7 +145,7 @@ a{color:inherit}
 .mockups{background:var(--pine-dk);color:var(--paper);--edge:var(--paper-lt)}
 .mockups .wrap{padding-block:clamp(64px,9vw,112px)}
 .mockups .label{color:var(--glow)} .mockups .sec-head p{color:#cdd8c9}
-.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(180px,22vw,280px);gap:16px}
+.gallery{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(180px,22vw,280px);gap:16px}
 .shot{all:unset;box-sizing:border-box;position:relative;overflow:hidden;border-radius:14px;cursor:zoom-in;background:#08231a}
 .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .shot:hover img,.shot:focus-visible img{transform:scale(1.06)}
@@ -366,14 +366,18 @@ a{color:inherit}
     <div class="sec-head rv">
       <p class="label">Mockups</p>
       <h2>Out in the world</h2>
-      <p>How the stamps live on paper: letters, posters, stickers and the full sheet.</p>
+      <p>How the identity lives in the world: letters, postcards, bags, mugs, street posters and gift wrap.</p>
     </div>
     <div class="gallery">
-      <button class="shot s-wide s-tall rv" data-full="img/mock/sheet.jpg" data-cap="The full sheet of stamps"><img src="img/mock/sheet.jpg" alt="Sheet of Christmas Nights stamps on a green table" loading="lazy"><figcaption>The full sheet</figcaption></button>
-      <button class="shot s-tall rv" data-full="img/mock/poster.jpg" data-cap="Festival poster with the carousel stamp"><img src="img/mock/poster.jpg" alt="Cream poster with the Christmas Nights wordmark and carousel stamp" loading="lazy"><figcaption>Festival poster</figcaption></button>
-      <button class="shot rv" data-full="img/mock/envelope.jpg" data-cap="An envelope, stamped and postmarked"><img src="img/mock/envelope.jpg" alt="Envelope with the Santa stamp and Sulifest postmark" loading="lazy"><figcaption>Stamped and sent</figcaption></button>
-      <button class="shot s-wide rv" data-full="img/mock/stickers.jpg" data-cap="Die-cut sticker set"><img src="img/mock/stickers.jpg" alt="Die-cut stamp stickers scattered on kraft paper" loading="lazy"><figcaption>Sticker set</figcaption></button>
-      <button class="shot rv" data-full="img/mock/fan.jpg" data-cap="Oak, wild goat and kew"><img src="img/mock/fan.jpg" alt="Oak, wild goat and kew stamps laid out on cream paper" loading="lazy"><figcaption>A trio of stamps</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/street-poster.jpg" data-cap="Street poster"><img src="img/mock/street-poster.jpg" alt="Christmas Nights poster pasted on a brick wall on a snowy evening street" loading="lazy"><figcaption>Street poster</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/letter.jpg" data-cap="Stamped and sent"><img src="img/mock/letter.jpg" alt="Kraft envelope with the Christmas Nights stamp and a red wax seal" loading="lazy"><figcaption>Stamped and sent</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/postcard.jpg" data-cap="Postcard at the market"><img src="img/mock/postcard.jpg" alt="Hand holding a Christmas Nights postcard at a snowy Christmas market" loading="lazy"><figcaption>Postcard at the market</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/tote.jpg" data-cap="Canvas tote"><img src="img/mock/tote.jpg" alt="Canvas tote bag printed with the Christmas Nights stamp, hanging by a Christmas tree" loading="lazy"><figcaption>Canvas tote</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/gifts.jpg" data-cap="Gift wrap and tags"><img src="img/mock/gifts.jpg" alt="Kraft-wrapped gifts with Christmas Nights stamp stickers and tags" loading="lazy"><figcaption>Gift wrap and tags</figcaption></button>
+      <button class="shot  rv" data-full="img/mock/mug.jpg" data-cap="Cocoa mug"><img src="img/mock/mug.jpg" alt="Mug of hot cocoa with marshmallows, printed with the Christmas Nights stamp" loading="lazy"><figcaption>Cocoa mug</figcaption></button>
+      <button class="shot  rv" data-full="img/mock/stickers.jpg" data-cap="Sticker set"><img src="img/mock/stickers.jpg" alt="Die-cut stamp stickers scattered on kraft paper" loading="lazy"><figcaption>Sticker set</figcaption></button>
+      <button class="shot s-wide rv" data-full="img/mock/sheet.jpg" data-cap="The full sheet"><img src="img/mock/sheet.jpg" alt="Sheet of Christmas Nights stamps on a green table" loading="lazy"><figcaption>The full sheet</figcaption></button>
+      <button class="shot  rv" data-full="img/mock/fan.jpg" data-cap="A trio of stamps"><img src="img/mock/fan.jpg" alt="Oak, wild goat and kew stamps laid out on cream paper" loading="lazy"><figcaption>A trio of stamps</figcaption></button>
     </div>
   </div>
   <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
