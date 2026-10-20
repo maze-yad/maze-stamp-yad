@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Christmas Nights · Branding by maze</title>
+<meta name="description" content="Christmas Nights by Sulifest: a vintage postage-stamp identity for Slemani's winter festival, designed by maze.">
+<meta name="theme-color" content="#24170f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Christmas Nights · Branding by maze">
+<meta property="og:description" content="A vintage postage-stamp identity for Slemani's winter festival, by maze. Creativity meets disruption.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Albert+Sans:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* Layout: a philatelic album — full-bleed paper and ink bands, stamps laid on paper the same colour as their own, edges perforated between bands. */
+:root{
+  --paper:#efdcb0;      /* sampled from the stamps' paper */
+  --paper-lt:#f6ead0;
+  --pine:#1b5e3b;       /* wordmark green */
+  --pine-dk:#0f3424;
+  --berry:#c23b2c;      /* postmark red */
+  --ochre:#b9843f;      /* mountain + antler ochre */
+  --cocoa:#24170f;
+  --ink:#2a1e15;
+  --ink-soft:#5a4634;
+  --glow:#efe27a;
+  --f-display:"Gloock","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --f-body:"Albert Sans","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-post:"Courier Prime","Courier New",ui-monospace,monospace;
+  --gut-l:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+  --bar-h:60px;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar-h) + env(safe-area-inset-top,0px))}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0;overflow-x:hidden}
+@supports (overflow:clip){body{overflow-x:clip}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cocoa)}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.05;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px dashed var(--berry);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.band{position:relative;overflow:hidden}
+.label{font-family:var(--f-post);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+
+/* perforated edge between bands */
+.perf-top::before{content:"";position:absolute;left:0;right:0;top:-1px;height:14px;z-index:2;
+  background:radial-gradient(circle at 50% 0,var(--edge,var(--paper)) 7px,transparent 7.5px) 0 0/22px 14px repeat-x}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--cocoa) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--paper);border-bottom:1px dashed rgba(239,220,176,.25)}
+.bar .wrap{height:var(--bar-h);display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{height:34px;width:auto}
+.brand span{font-family:var(--f-display);font-size:20px;white-space:nowrap}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14px;padding:6px 10px;border-radius:99px;opacity:.85}
+.nav a:hover{opacity:1;background:rgba(239,220,176,.12)}
+.clock{display:flex;align-items:center;gap:8px;font-family:var(--f-post);font-size:13px;letter-spacing:.06em;white-space:nowrap;border:1px dashed rgba(239,220,176,.45);border-radius:99px;padding:5px 12px}
+.clock b{color:var(--glow);font-weight:700;font-variant-numeric:tabular-nums}
+.clock i{width:7px;height:7px;border-radius:50%;background:var(--glow);box-shadow:0 0 10px var(--glow);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+@media (max-width:820px){.nav{display:none}.clock{margin-left:auto}}
+@media (max-width:400px){.brand span{font-size:17px}.clock{padding:4px 9px;font-size:12px}}
+
+/* ---------- opening ---------- */
+.opening{background:var(--cocoa);color:var(--paper);text-align:center}
+.opening .wrap{padding-block:clamp(72px,12vw,140px);display:grid;justify-items:center;gap:26px}
+.opening .label{color:var(--ochre)}
+.maze-mark{width:min(560px,82vw);aspect-ratio:1600/241;background:currentColor;
+  -webkit-mask:url(img/maze.png) center/contain no-repeat;mask:url(img/maze.png) center/contain no-repeat}
+.divider{display:flex;align-items:center;gap:12px;color:var(--berry)}
+.divider::before,.divider::after{content:"";width:56px;border-top:2px dashed currentColor}
+.divider span{width:9px;height:9px;border-radius:50%;background:currentColor}
+.statement{font-family:var(--f-display);font-size:clamp(22px,3vw,32px);line-height:1.3;max-width:30ch;text-wrap:balance}
+.statement em{font-style:normal;color:var(--glow)}
+.up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.up:nth-child(2){animation-delay:.25s}.up:nth-child(3){animation-delay:.5s}.up:nth-child(4){animation-delay:.75s}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--paper);--edge:var(--cocoa)}
+.hero .wrap{padding-block:clamp(56px,8vw,96px) clamp(48px,6vw,72px);display:grid;justify-items:center;text-align:center;gap:28px}
+.hero-logo{width:min(900px,100%);will-change:transform;filter:drop-shadow(0 22px 30px rgba(60,35,15,.22))}
+.intro{font-family:var(--f-display);font-size:clamp(24px,3.4vw,38px);max-width:24ch;color:var(--pine);line-height:1.2}
+.credit{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft)}
+.credit .maze-mark{width:86px;color:var(--ink)}
+.cue{display:grid;justify-items:center;gap:6px;color:var(--berry);text-decoration:none}
+.cue span{width:2px;height:40px;background:linear-gradient(var(--berry),transparent);animation:cue 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(.2)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- story ---------- */
+.story{background:var(--bg);--edge:var(--prev)}
+.story .wrap{padding-block:clamp(64px,9vw,120px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,88px);align-items:center}
+.story.flip .art{order:2}
+.story .art{position:relative;justify-self:center;width:min(440px,100%)}
+.story .art img{width:100%;filter:drop-shadow(0 18px 24px rgba(70,40,15,.25));transform:rotate(var(--r,-2deg))}
+.story .num{position:absolute;font-family:var(--f-display);font-size:clamp(110px,16vw,190px);line-height:1;color:var(--ochre);opacity:.18;top:-.35em;left:-.25em;z-index:-0;pointer-events:none}
+.story.flip .num{left:auto;right:-.2em}
+.story .copy{display:grid;gap:18px;min-width:0;max-width:540px}
+.story .label{color:var(--berry)}
+.story h2{font-size:clamp(38px,5.5vw,66px);color:var(--pine)}
+.story p.desc{font-size:18px;color:var(--ink)}
+.why{border:2px dashed color-mix(in srgb,var(--berry) 55%,transparent);border-radius:14px;padding:16px 18px;display:grid;gap:6px;background:color-mix(in srgb,var(--paper-lt) 55%,transparent)}
+.why .label{font-size:12px}
+.why p{font-size:15.5px;color:var(--ink-soft)}
+@media (max-width:760px){.story .wrap{grid-template-columns:1fr}.story.flip .art{order:0}.story .art{width:min(360px,86%)}}
+
+/* ---------- element box ---------- */
+.elements{background:var(--paper-lt);--edge:var(--paper)}
+.sec-head{display:grid;gap:12px;max-width:640px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{font-size:clamp(36px,5vw,58px)}
+.sec-head p{color:var(--ink-soft)}
+.elements .wrap{padding-block:clamp(64px,9vw,112px)}
+.elements .label{color:var(--berry)}
+.elements h2{color:var(--pine)}
+.grid-el{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-rows:auto 1fr;gap:12px;background:var(--paper);border-radius:16px;padding:16px;outline:1.5px solid rgba(120,80,40,.22);outline-offset:-1.5px;transition:transform .25s}
+.tile:focus-visible{outline:3px dashed var(--berry)}
+.tile .pic{aspect-ratio:4/5;display:grid;place-items:center}
+.tile .pic img{max-height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(70,40,15,.18))}
+.tile.dark{background:var(--pine)}
+.tile.dark .meta b{color:var(--paper)} .tile.dark .meta span{color:#cfe0cf}
+.tile .meta{display:grid;gap:2px}
+.tile .meta b{font-family:var(--f-display);font-weight:400;font-size:20px;color:var(--pine)}
+.tile .meta span{font-size:14px;color:var(--ink-soft)}
+.tile .meta i{font-family:var(--f-post);font-style:normal;font-size:11px;letter-spacing:.12em;color:var(--berry)}
+.tile.pop{animation:pop .55s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(var(--i)*60ms)}
+@keyframes pop{from{opacity:0;transform:scale(.85) translateY(16px)}to{opacity:1;transform:none}}
+.tile.wiggle{animation:wiggle .5s ease}
+@keyframes wiggle{20%{transform:rotate(-4deg)}40%{transform:rotate(3.5deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(1deg)}}
+@media (max-width:480px){.grid-el{grid-template-columns:1fr 1fr;gap:12px}.tile{padding:10px}.tile .meta b{font-size:17px}.tile .meta span{font-size:13px}}
+
+/* ---------- mockups ---------- */
+.mockups{background:var(--pine-dk);color:var(--paper);--edge:var(--paper-lt)}
+.mockups .wrap{padding-block:clamp(64px,9vw,112px)}
+.mockups .label{color:var(--glow)} .mockups .sec-head p{color:#cdd8c9}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(180px,22vw,280px);gap:16px}
+.shot{all:unset;box-sizing:border-box;position:relative;overflow:hidden;border-radius:14px;cursor:zoom-in;background:#08231a}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.shot:hover img,.shot:focus-visible img{transform:scale(1.06)}
+.shot figcaption{position:absolute;left:12px;bottom:12px;right:12px;font-size:14px;background:rgba(20,14,10,.66);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:6px 12px;border-radius:99px;width:fit-content;max-width:calc(100% - 24px)}
+.shot:focus-visible{outline:3px dashed var(--glow)}
+.s-wide{grid-column:span 2}.s-tall{grid-row:span 2}
+@media (max-width:700px){.gallery{grid-template-columns:1fr;grid-auto-rows:auto}.s-wide,.s-tall{grid-column:auto;grid-row:auto}.shot{aspect-ratio:4/3}.shot.s-tall{aspect-ratio:3/4}}
+
+/* ---------- social ---------- */
+.social{background:var(--paper);--edge:var(--pine-dk)}
+.social .wrap{padding-block:clamp(64px,9vw,112px)}
+.social .label{color:var(--berry)} .social h2{color:var(--pine)}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(20px,3vw,34px);padding:10px 4px}
+.post{all:unset;box-sizing:border-box;cursor:zoom-in;background:#fffdf8;color:#1b1410;border-radius:14px;box-shadow:0 14px 30px rgba(60,35,15,.18);transform:rotate(var(--t));transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s;display:block;font-family:var(--f-body)}
+.post:hover,.post:focus-visible{transform:rotate(0) translateY(-6px);box-shadow:0 22px 40px rgba(60,35,15,.25)}
+.post:focus-visible{outline:3px dashed var(--berry)}
+.p-head{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.av{width:34px;height:34px;border-radius:50%;padding:2px;background:conic-gradient(var(--berry),var(--ochre),var(--pine),var(--berry))}
+.av span{display:block;width:100%;height:100%;border-radius:50%;background:var(--paper) url(img/logo-sm.webp) 30% 20%/260% auto no-repeat;border:2px solid #fffdf8}
+.p-head b{font-size:14px;display:block;line-height:1.2}.p-head small{font-size:12px;color:#7a6a5a}
+.p-head .dots{margin-left:auto;letter-spacing:2px;color:#7a6a5a}
+.p-media{aspect-ratio:1;position:relative;display:grid;grid-template-rows:auto minmax(0,1fr) auto;justify-items:center;align-items:center;gap:4%;padding:7% 8% 5%;overflow:hidden;background:var(--m);box-sizing:border-box}
+.p-media img{height:100%;width:auto;max-width:70%;min-height:0;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.3));transform:rotate(-3deg)}
+.p-media .tag{text-align:center;font-family:var(--f-display);font-size:clamp(18px,2vw,24px);line-height:1.1;color:var(--mt)}
+.p-media .tag small{display:block;font-family:var(--f-post);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:4px;opacity:.8}
+.p-media .pfoot{font-family:var(--f-post);font-size:10.5px;letter-spacing:.16em;color:var(--mt);opacity:.8}
+.p-icons{display:flex;gap:14px;padding:10px 12px 4px}
+.p-icons svg{width:22px;height:22px;fill:none;stroke:#1b1410;stroke-width:1.8}
+.p-icons .save{margin-left:auto}
+.p-cap{padding:2px 12px 14px;font-size:13.5px;line-height:1.45}
+.p-cap b{margin-right:4px}
+
+/* ---------- closing ---------- */
+.closing{background:var(--berry);color:var(--paper);text-align:center;--edge:var(--paper)}
+.closing .wrap{padding-block:clamp(72px,10vw,128px);display:grid;justify-items:center;gap:28px}
+.disc{width:min(440px,78vw);aspect-ratio:1;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 0 0 10px color-mix(in srgb,var(--paper) 30%,transparent),0 30px 60px rgba(60,10,5,.35);animation:spin 60s linear infinite;position:relative}
+.disc::after{content:"";position:absolute;inset:14px;border-radius:50%;border:2px dashed color-mix(in srgb,var(--berry) 60%,transparent)}
+.disc img{width:64%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.closing h2{font-size:clamp(34px,5vw,58px);max-width:18ch}
+.closing p{max-width:52ch;font-size:18px;color:#fbe9d6}
+.btn{all:unset;cursor:pointer;font-weight:600;font-size:15px;background:var(--paper);color:var(--berry);padding:12px 22px;border-radius:99px;display:inline-flex;gap:8px;align-items:center;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)} .btn:focus-visible{outline:3px dashed var(--paper);outline-offset:4px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--cocoa);color:var(--paper);--edge:var(--berry)}
+.foot .wrap{padding-block:clamp(64px,8vw,96px) 0;display:grid;justify-items:center;gap:20px;text-align:center}
+.foot .label{color:var(--ochre)}
+.foot .maze-mark{width:min(720px,90vw);color:var(--paper)}
+.slim{margin-top:clamp(48px,6vw,72px);width:100%;border-top:1px dashed rgba(239,220,176,.25);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-block:18px;font-size:13px;color:#cbb994}
+.slim span:first-child{font-family:var(--f-display);font-size:16px;color:var(--paper)}
+
+/* ---------- design-by-maze trademark ---------- */
+.tm{position:absolute;right:max(14px,env(safe-area-inset-right,0px));bottom:14px;z-index:3;display:flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tm,var(--ink-soft));opacity:.75;pointer-events:none}
+.tm .maze-mark{width:54px;color:inherit}
+.opening .tm,.foot .tm{--tm:var(--paper)} .mockups .tm{--tm:#cdd8c9} .closing .tm{--tm:var(--paper)}
+
+/* ---------- ambient + controls ---------- */
+#ambient{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.music{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;all:unset;position:fixed;cursor:pointer;display:flex;align-items:center;gap:8px;background:var(--cocoa);color:var(--paper);font-size:13px;font-weight:600;padding:10px 16px 10px 12px;border-radius:99px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.music{left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55}
+.music:focus-visible{outline:3px dashed var(--berry);outline-offset:3px}
+.music .eq{display:flex;gap:2px;align-items:flex-end;height:14px}
+.music .eq i{width:3px;height:4px;background:var(--glow);border-radius:2px}
+.music[aria-pressed="true"] .eq i{animation:eq .9s ease-in-out infinite}
+.music[aria-pressed="true"] .eq i:nth-child(2){animation-delay:.2s}.music[aria-pressed="true"] .eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{50%{height:14px}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(18,12,8,.9);display:grid;place-items:center;padding:calc(56px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.lb-stage{max-width:min(1100px,100%);max-height:100%;display:grid;place-items:center}
+.lb-stage img{max-height:calc(100vh - 120px);width:auto;border-radius:10px}
+.lb-stage .post{transform:none;cursor:default;width:min(520px,92vw)}
+.lb-close{all:unset;cursor:pointer;position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;background:var(--paper);color:var(--cocoa);display:grid;place-items:center;font-size:26px;line-height:1}
+.lb-close:focus-visible{outline:3px dashed var(--glow)}
+.lb-cap{color:var(--paper);text-align:center;margin-top:12px;font-size:15px}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.hide{opacity:0;transform:translateY(34px)}
+.rv.hide.from-l{transform:translateX(-40px)} .rv.hide.from-r{transform:translateX(40px)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv.hide{opacity:1;transform:none}
+  #ambient{display:none}
+}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo-sm.webp" alt="" width="50" height="34"><span>Christmas Nights</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#story">Story</a><a href="#elements">Elements</a><a href="#mockups">Mockups</a><a href="#social">Social</a>
+    </nav>
+    <div class="clock" title="Local time in Slemani"><i></i>Slemani <b id="clock">--:--</b></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="band opening" aria-label="Credits">
+  <div class="wrap">
+    <p class="label up">A branding by</p>
+    <div class="maze-mark up" role="img" aria-label="maze"></div>
+    <div class="divider up" aria-hidden="true"><span></span></div>
+    <p class="statement up">A branding done by maze for <em>Christmas Nights</em>, keeping the original identity of <em>Sulifest</em> recognizable, so everyone knows who is behind it just by looking at it.</p>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band hero perf-top" aria-label="Christmas Nights">
+  <div class="wrap">
+    <img class="hero-logo" id="heroLogo" src="img/logo.webp" alt="Christmas Nights by Sulifest logo: a vintage postage stamp with the Slemani horseman statue, snowy pines and a Christmas tree" width="1400" height="950">
+    <h1 class="intro">A winter festival, posted to every home in Slemani like a letter from an old friend.</h1>
+    <div class="credit">Branding by <span class="maze-mark" role="img" aria-label="maze"></span></div>
+    <a class="cue" href="#story"><span class="label">Scroll</span><span></span></a>
+  </div>
+</section>
+
+<div id="story"></div>
+<!-- STORY -->
+<section class="band story perf-top" style="--bg:#efddb2;--prev:var(--paper)">
+  <div class="wrap">
+    <div class="art rv from-l"><span class="num">08</span><img src="img/slemani.webp" alt="Stamp of the Slemani horseman statue in red, on a stone plinth among snowy pines" loading="lazy" width="1000" height="1340"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 08 of 10 · Slemani</p>
+      <h2>The city on a stamp</h2>
+      <p class="desc">The horseman statue is one of the first things people picture when they think of Slemani. Here he stands under fresh snow, ringed by pines, printed in the same warm red as the festival's postmark.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>A festival belongs to a place. Putting the city's best-known landmark at the heart of the identity tells everyone, at a glance, that these are Slemani's Christmas Nights.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band story flip perf-top" style="--bg:#f0dcae;--prev:#efddb2;--r:2deg">
+  <div class="wrap">
+    <div class="art rv from-r"><span class="num">06</span><img src="img/halparke.webp" alt="Stamp of three dancers in traditional Kurdish dress holding hands in the snow" loading="lazy" width="1000" height="1221"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 06 of 10 · Halparke</p>
+      <h2>Hands joined, feet in the snow</h2>
+      <p class="desc">Halparke is the dance that turns a crowd into a line of friends. Three dancers in full traditional dress lead it here, coins catching the light, a scarf swinging overhead.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>Christmas Nights is about celebrating together. The deep greens and reds of the costumes are the brand palette itself, so tradition and festival speak with one voice.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band story perf-top" style="--bg:#f1dbac;--prev:#f0dcae;--r:-1.5deg">
+  <div class="wrap">
+    <div class="art rv from-l"><span class="num">10</span><img src="img/kew.webp" alt="Stamp of a chukar partridge, the kew, standing in snow before pine trees" loading="lazy" width="1000" height="1336"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 10 of 10 · Kew</p>
+      <h2>A familiar winter visitor</h2>
+      <p class="desc">The kew, the chukar partridge of the Kurdish hills, turns up again and again in local songs and stories. On its stamp it stands proud in the snow, its striped wings drawn in fine engraved lines.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>We wanted nature that feels local rather than imported. The kew gives the set a gentle, homegrown character, sitting right beside Santa and the reindeer.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band story flip perf-top" style="--bg:#efddb1;--prev:#f1dbac;--r:2.5deg">
+  <div class="wrap">
+    <div class="art rv from-r"><span class="num">03</span><img src="img/wild-goat.webp" alt="Stamp of a wild mountain goat with long curved horns on a snowy rock" loading="lazy" width="1000" height="1342"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 03 of 10 · Wild Goat</p>
+      <h2>Up on the peaks</h2>
+      <p class="desc">A wild goat holds its ground on a snowy summit, horns sweeping back like the mountain ridges behind it. It is the boldest stamp in the set and the one with the most attitude.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>The mountains around the city shape its winters. The goat brings that strength and sense of height into a brand that could otherwise feel only cosy.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band story perf-top" style="--bg:#efdcb1;--prev:#efddb1;--r:-2deg">
+  <div class="wrap">
+    <div class="art rv from-l"><span class="num">09</span><img src="img/old-houses.webp" alt="Stamp of old stone houses with glowing stained-glass windows and smoking chimneys in the snow" loading="lazy" width="1000" height="1304"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 09 of 10 · Old Houses</p>
+      <h2>Every window lit</h2>
+      <p class="desc">Stone houses stacked up a hillside, snow on every roof, smoke curling from the chimneys and stained glass glowing gold and red from inside.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>The festival is called Christmas Nights, and nothing says night like a lit window. These houses carry the warmth of the evening and the idea of coming home.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<section class="band story flip perf-top" style="--bg:#efdcaf;--prev:#efdcb1;--r:1.5deg">
+  <div class="wrap">
+    <div class="art rv from-r"><span class="num">04</span><img src="img/christmas-tree.webp" alt="Stamp of a decorated Christmas tree with a gold star and wrapped gifts in the snow" loading="lazy" width="1000" height="1421"></div>
+    <div class="copy rv">
+      <p class="label">Stamp 04 of 10 · Christmas Tree</p>
+      <h2>The one everyone knows</h2>
+      <p class="desc">Red baubles, gold lights, a star on top and presents waiting underneath. The classic tree, drawn with the same engraved texture as the rest of the set.</p>
+      <div class="why"><span class="label">Why we chose it</span><p>Some symbols need no explaining. The tree makes the festival readable to anyone, from any distance, and lets the local stamps around it feel like part of the season.</p></div>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<!-- ELEMENTS -->
+<section class="band elements perf-top" id="elements" style="--edge:#efdcaf">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">The element box</p>
+      <h2>Every piece of the set</h2>
+      <p>The logo, its wordmark, the Sulifest postmark and all ten stamps. Tap any of them.</p>
+    </div>
+    <div class="grid-el" id="grid"></div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<!-- MOCKUPS -->
+<section class="band mockups perf-top" id="mockups">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Mockups</p>
+      <h2>Out in the world</h2>
+      <p>How the stamps live on paper: letters, posters, stickers and the full sheet.</p>
+    </div>
+    <div class="gallery">
+      <button class="shot s-wide s-tall rv" data-full="img/mock/sheet.jpg" data-cap="The full sheet of ten stamps"><img src="img/mock/sheet.jpg" alt="Sheet of all ten Christmas Nights stamps on a green table" loading="lazy"><figcaption>The full sheet</figcaption></button>
+      <button class="shot s-tall rv" data-full="img/mock/poster.jpg" data-cap="Festival poster with the carousel stamp"><img src="img/mock/poster.jpg" alt="Cream poster with the Christmas Nights wordmark and carousel stamp" loading="lazy"><figcaption>Festival poster</figcaption></button>
+      <button class="shot rv" data-full="img/mock/envelope.jpg" data-cap="An envelope, stamped and postmarked"><img src="img/mock/envelope.jpg" alt="Envelope with the Santa stamp and Sulifest postmark" loading="lazy"><figcaption>Stamped and sent</figcaption></button>
+      <button class="shot s-wide rv" data-full="img/mock/stickers.jpg" data-cap="Die-cut sticker set"><img src="img/mock/stickers.jpg" alt="Die-cut stamp stickers scattered on kraft paper" loading="lazy"><figcaption>Sticker set</figcaption></button>
+      <button class="shot rv" data-full="img/mock/fan.jpg" data-cap="Oak, wild goat and kew"><img src="img/mock/fan.jpg" alt="Oak, wild goat and kew stamps laid out on cream paper" loading="lazy"><figcaption>A trio of stamps</figcaption></button>
+    </div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<!-- SOCIAL -->
+<section class="band social perf-top" id="social">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Social media templates</p>
+      <h2>Ready to post</h2>
+      <p>One stamp per post, each on a colour from the palette, with room for a short line on top.</p>
+    </div>
+    <div class="posts" id="posts"></div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+
+<!-- CLOSING -->
+<section class="band closing perf-top">
+  <div class="wrap">
+    <div class="disc rv"><img src="img/logo-sm.webp" alt="Christmas Nights by Sulifest logo" loading="lazy" width="640" height="434"></div>
+    <h2 class="rv">Sealed, stamped and on its way</h2>
+    <p class="rv">Thank you for opening this letter. We hope Christmas Nights brings warm windows, joined hands and a little snow to everyone in Slemani.</p>
+    <button class="btn rv" id="toTop">Back to top <span aria-hidden="true">↑</span></button>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</section>
+</main>
+
+<footer class="band foot perf-top">
+  <div class="wrap">
+    <p class="label">Branding and design by</p>
+    <div class="maze-mark" role="img" aria-label="maze"></div>
+    <div class="slim"><span>Christmas Nights</span><span>Branding by maze</span></div>
+  </div>
+  <div class="tm"><span>Design by</span><span class="maze-mark"></span></div>
+</footer>
+
+<canvas id="ambient" aria-hidden="true"></canvas>
+<button class="music" id="music" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span id="musicLbl">Play music</span></button>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Enlarged view">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <div class="lb-stage" id="lbStage"></div>
+</div>
+
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s);
+
+/* Slemani clock */
+const fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Baghdad',hour:'2-digit',minute:'2-digit'});
+const tick=()=>{$('#clock').textContent=fmt.format(new Date())};tick();setInterval(tick,15000);
+
+/* element box */
+const EL=[
+ ['logo','Main logo','The full stamp mark',1],
+ ['wordmark','Wordmark','Name with folk flourishes',0],
+ ['postmark','Sulifest postmark','The original Sulifest seal',0],
+ ['reindeer','Reindeer','Bell, ribbon and antlers','01'],
+ ['carousel','Carousel','Lights going round','02'],
+ ['wild-goat','Wild Goat','Strength of the peaks','03'],
+ ['christmas-tree','Christmas Tree','The classic, star on top','04'],
+ ['santa','Santa','Arriving with a full sack','05'],
+ ['halparke','Halparke','Dancing hand in hand','06'],
+ ['oak','Oak','Old roots, fresh snow','07'],
+ ['slemani','Slemani','The city\'s horseman','08'],
+ ['old-houses','Old Houses','Every window lit','09'],
+ ['kew','Kew','The local partridge','10'],
+];
+const grid=$('#grid');
+EL.forEach(([f,n,c,no,dark],i)=>{
+  const b=document.createElement('button');b.className='tile'+(dark?' dark':'');b.style.setProperty('--i',i%4);
+  const src=f==='wordmark'||f==='postmark'?`img/${f}.webp`:`img/${f}-sm.webp`;
+  b.innerHTML=`<div class="pic"><img src="${src}" alt="" loading="lazy"></div><div class="meta">${no&&no!==1?`<i>No. ${no}</i>`:'<i>Identity</i>'}<b>${n}</b><span>${c}</span></div>`;
+  b.setAttribute('aria-label',n+': '+c);
+  b.addEventListener('click',()=>{b.classList.remove('wiggle','pop');void b.offsetWidth;b.classList.add('wiggle')});
+  grid.appendChild(b);
+});
+
+/* social posts */
+const P=[
+ ['kew','#1b5e3b','#efdcb0','Winter is calling','from the hills','Christmas Nights · Slemani','The kew is back in the snow. Christmas Nights is almost here. ❄️','-3deg'],
+ ['santa','#c23b2c','#f6ead0','Santa wrote first','check your post','Christmas Nights · Sulifest','Someone has already sent his letter. Have you? 🎅','2.5deg'],
+ ['halparke','#efdcb0','#1b5e3b','Hands joined','feet in the snow','Christmas Nights · Slemani','This is how we celebrate. Find your place in the line. 💃','-2deg'],
+ ['carousel','#24170f','#efe27a','Round and round','under the lights','Christmas Nights · Sulifest','The carousel never stops turning on Christmas Nights. ✨','3deg'],
+];
+const icons=`<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3.3-6.5L20 4l-1 4.2A8 8 0 0 1 20 12z"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>`;
+const posts=$('#posts');
+P.forEach(([f,m,mt,t1,t2,foot,cap,tilt],i)=>{
+  const b=document.createElement('button');b.className='post rv';b.style.setProperty('--t',tilt);
+  b.setAttribute('aria-label','Enlarge post: '+t1);
+  b.innerHTML=`<div class="p-head"><span class="av"><span></span></span><div><b>Christmas Nights</b><small>by Sulifest</small></div><span class="dots">···</span></div>
+  <div class="p-media" style="--m:${m};--mt:${mt}"><div class="tag">${t1}<small>${t2}</small></div><img src="img/${f}-sm.webp" alt="" loading="lazy"><div class="pfoot">${foot}</div></div>
+  <div class="p-icons">${icons}</div><p class="p-cap"><b>christmasnights</b>${cap}</p>`;
+  b.addEventListener('click',()=>{const c=b.cloneNode(true);c.classList.remove('rv','hide');c.removeAttribute('aria-label');c.disabled=true;openLB(c,null)});
+  posts.appendChild(b);
+});
+
+/* lightbox */
+const lb=$('#lb'),stage=$('#lbStage');let last=null;
+function openLB(node,cap){last=document.activeElement;stage.innerHTML='';const w=document.createElement('div');w.style.display='grid';w.style.justifyItems='center';w.appendChild(node);
+  if(cap){const p=document.createElement('p');p.className='lb-cap';p.textContent=cap;w.appendChild(p)}stage.appendChild(w);lb.hidden=false;document.body.style.overflow='hidden';$('#lbClose').focus()}
+function closeLB(){lb.hidden=true;stage.innerHTML='';document.body.style.overflow='';last&&last.focus()}
+document.querySelectorAll('.shot').forEach(s=>s.addEventListener('click',()=>{const im=new Image();im.src=s.dataset.full;im.alt=s.dataset.cap;openLB(im,s.dataset.cap)}));
+$('#lbClose').onclick=closeLB;
+lb.addEventListener('click',e=>{if(e.target===lb||e.target===stage)closeLB()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden)closeLB()});
+
+/* back to top */
+$('#toTop').onclick=()=>scrollTo({top:0,behavior:RM?'auto':'smooth'});
+
+/* reveal: only hide what starts below the fold */
+const rvs=[...document.querySelectorAll('.rv')];
+if(!RM&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('hide');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  rvs.forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('hide');io.observe(el)}});
+  const tiles=[...grid.children];
+  const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('pop');io2.unobserve(e.target)}}),{rootMargin:'0px 0px -5% 0px'});
+  tiles.forEach(t=>{if(t.getBoundingClientRect().top>innerHeight)io2.observe(t)});
+}
+
+/* hero scroll-linked motion */
+const hl=$('#heroLogo');
+if(!RM){let q=false;const upd=()=>{q=false;const y=Math.min(scrollY,900);hl.style.transform=`translateY(${y*0.06}px) rotate(${-y*0.004}deg) scale(${1-y*0.00012})`};
+  addEventListener('scroll',()=>{if(!q){q=true;requestAnimationFrame(upd)}},{passive:true})}
+
+/* ambient: drifting postmark rings + twinkling sparkles */
+const cv=$('#ambient'),cx=cv.getContext('2d');let W,H,dpr,parts=[],run=!RM;
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+function mk(ring){return ring?{ring:1,x:Math.random()*W,y:H+Math.random()*H,r:18+Math.random()*26,vy:-(.12+Math.random()*.18),vx:(Math.random()-.5)*.15,a:Math.random()*6.28,va:(Math.random()-.5)*.004,o:.10+Math.random()*.08}
+ :{x:Math.random()*W,y:Math.random()*H,s:2+Math.random()*3.5,ph:Math.random()*6.28,sp:.01+Math.random()*.02,vy:.08+Math.random()*.2,c:Math.random()<.5?'239,226,122':'192,138,69'}}
+function init(){size();const n=Math.round(Math.min(W,1400)/1400*46)+14;parts=[...Array(n)].map(()=>mk(0));for(let i=0;i<(W<600?3:6);i++){const p=mk(1);p.y=Math.random()*H;parts.push(p)}}
+function star(x,y,s){cx.beginPath();cx.moveTo(x,y-s*2);cx.quadraticCurveTo(x,y,x+s*2,y);cx.quadraticCurveTo(x,y,x,y+s*2);cx.quadraticCurveTo(x,y,x-s*2,y);cx.quadraticCurveTo(x,y,x,y-s*2);cx.fill()}
+function frame(){if(!run)return;cx.clearRect(0,0,W,H);
+ for(const p of parts){
+  if(p.ring){p.y+=p.vy;p.x+=p.vx;p.a+=p.va;if(p.y<-80){Object.assign(p,mk(1));p.y=H+60}
+   cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.strokeStyle=`rgba(194,59,44,${p.o})`;cx.lineWidth=1.6;cx.setLineDash([5,4]);
+   cx.beginPath();cx.arc(0,0,p.r,0,6.28);cx.stroke();cx.beginPath();cx.arc(0,0,p.r*.62,0,6.28);cx.stroke();
+   cx.setLineDash([]);cx.lineWidth=2;cx.beginPath();for(let k=0;k<3;k++){cx.moveTo(-p.r*.22,0);}cx.moveTo(0,-p.r*.25);cx.lineTo(0,p.r*.25);cx.moveTo(-p.r*.25,0);cx.lineTo(p.r*.25,0);cx.stroke();cx.restore()}
+  else{p.ph+=p.sp;p.y+=p.vy;if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+   const a=(Math.sin(p.ph)*.5+.5)*.75;cx.fillStyle=`rgba(${p.c},${a})`;star(p.x,p.y,p.s*(.6+.4*Math.sin(p.ph)))}
+ }requestAnimationFrame(frame)}
+if(!RM){init();addEventListener('resize',init);requestAnimationFrame(frame);
+ document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(frame)})}
+
+/* music: an original music-box waltz, composed for this page */
+const btn=$('#music'),lbl=$('#musicLbl');let ac,master,timer,playing=false,step=0,nextT=0;
+const BPM=96,beat=60/BPM;
+const N=n=>440*Math.pow(2,(n-69)/12);
+// 16-bar melody in D major (MIDI numbers, 0 = rest), three beats per bar
+const MEL=[74,0,78, 81,0,78, 76,0,74, 73,0,69, 71,0,74, 78,76,74, 76,0,0, 0,0,0,
+           74,0,78, 81,0,83, 81,79,78, 76,0,73, 74,76,78, 79,0,76, 74,0,0, 0,0,0,
+           86,0,85, 83,0,81, 79,0,78, 76,0,74, 79,0,78, 76,74,73, 74,0,69, 0,0,0,
+           71,73,74, 76,78,79, 81,0,78, 74,0,76, 78,0,76, 73,0,69, 74,0,0, 0,0,0];
+const BASS=[50,57,55,57, 50,55,57,50, 59,54,55,57, 55,52,57,50]; // one per bar
+function bell(t,f,v){const o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain();o.type='sine';o2.type='sine';o.frequency.value=f;o2.frequency.value=f*2.76;
+ const g2=ac.createGain();g2.gain.value=.18;o2.connect(g2).connect(g);o.connect(g);g.connect(master);
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.008);g.gain.exponentialRampToValueAtTime(.0008,t+1.8);o.start(t);o2.start(t);o.stop(t+1.9);o2.stop(t+1.9)}
+function pad(t,f){const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=f;o.connect(g).connect(master);
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+.3);g.gain.exponentialRampToValueAtTime(.001,t+beat*3);o.start(t);o.stop(t+beat*3+.05)}
+function sched(){while(nextT<ac.currentTime+.25){const n=MEL[step%MEL.length];if(n)bell(nextT,N(n),.16);
+  if(step%3===0){const b=BASS[Math.floor(step/3)%BASS.length];pad(nextT,N(b));bell(nextT,N(b+12),.05)}
+  step++;nextT+=beat}}
+function fade(to,dur){const t=ac.currentTime;master.gain.cancelScheduledValues(t);master.gain.setValueAtTime(master.gain.value,t);master.gain.linearRampToValueAtTime(to,t+dur)}
+async function start(){if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();master=ac.createGain();master.gain.value=0;master.connect(ac.destination)}
+ await ac.resume();nextT=ac.currentTime+.1;clearInterval(timer);timer=setInterval(sched,60);sched();fade(.8,1.6)}
+function stop(){if(!ac)return;fade(0,1);setTimeout(()=>{if(!playing){clearInterval(timer);ac.suspend()}},1100)}
+btn.onclick=()=>{playing=!playing;btn.setAttribute('aria-pressed',playing);lbl.textContent=playing?'Pause music':'Play music';playing?start():stop()};
+document.addEventListener('visibilitychange',()=>{if(!playing||!ac)return;if(document.hidden){fade(0,.4);setTimeout(()=>{if(document.hidden){clearInterval(timer);ac.suspend()}},450)}else start()});
+})();
+</script>
+
+</body>
+</html>
